@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "b5bf479f0b24b19ee671",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 540.69920937956874,
+    "width": 807.56043207335586,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "index_1 (1)"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "datetime"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "index_1 (1).datetime.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "datetime Mes",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "index_1 (1)"
+                    }
+                  },
+                  "Property": "media"
+                }
+              },
+              "queryRef": "index_1 (1).media",
+              "nativeQueryRef": "media"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "index_1 (1)"
+                    }
+                  },
+                  "Property": "Total Ingresos"
+                }
+              },
+              "queryRef": "index_1 (1).Total Ingresos",
+              "nativeQueryRef": "Total Ingresos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "index_1 (1)"
+                    }
+                  },
+                  "Property": "Total Transacciones"
+                }
+              },
+              "queryRef": "index_1 (1).Total Transacciones",
+              "nativeQueryRef": "Total Transacciones"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
